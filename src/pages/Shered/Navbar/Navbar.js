@@ -145,9 +145,9 @@ const Navbar = () => {
             <Link style={{textDecoration: 'none'}} to='/myBookings'>
               <Button
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', mx: 2}}
+                sx={{ my: 2, color: 'white', display: 'block'}}
               >
-                My Orders
+                My Booking
               </Button>
               </Link>
           }
@@ -157,9 +157,9 @@ const Navbar = () => {
               <Link style={{textDecoration: 'none'}} to='/manageAllOrders'>
               <Button
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block', mx: 1}}
               >
-                Manage All Orders
+                Manage All Booking
               </Button>
               </Link>
           }
@@ -169,7 +169,7 @@ const Navbar = () => {
             <Link style={{textDecoration: 'none'}} to='/addTravelPlan'>
               <Button
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', mx: 2}}
+                sx={{ my: 2, color: 'white', display: 'block'}}
               >
                 Add Travel Plan
               </Button>

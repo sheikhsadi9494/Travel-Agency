@@ -130,7 +130,7 @@ const ManageAllOrder = ({ booking, setBookings, bookings }) => {
         </Button>
         <Button
           onClick={() => handleUpdateStatus(_id)}
-          sx={{ mb: 3 }}
+          sx={{ mb: 3 , backgroundColor: '#F79508'}}
           variant="contained"
         >
           Update Status

@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { CircularProgress, Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import Service from "../Home/Service/Service";
@@ -41,13 +41,20 @@ const Services = () => {
           Tours can help you find the trip that's perfect for you!.
         </Typography>
       </Box>
-      <Box sx={{ mt: 5 }}>
-        <Grid container spacing={2}>
+      {
+      services.length <= 0 ?
+      <Box sx={{width: '3.5%', mx: 'auto',mt: 10}}>
+          <CircularProgress/>
+      </Box>
+      :
+        <Box sx={{ mt: 5 }}>
+        <Grid container spacing={4}>
           {services.map((service) => (
             <Service key={service._id} service={service}></Service>
           ))}
         </Grid>
       </Box>
+      }
     </Container>
   );
 };

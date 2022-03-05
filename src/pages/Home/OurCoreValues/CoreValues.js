@@ -16,7 +16,7 @@ const CoreValues = () => {
              Our thoughtful team of knowledgeable experts are here to take care of every need, from the second you <br /> contact us to when you return
               </Typography>
             </Box>
-      <Grid container spacing={2}>
+      <Grid container spacing={4}>
         <Grid item xs={12} md={6} lg={4}>
           <Paper sx={{ padding: '30px' }} elevation={3}>
             <Box>

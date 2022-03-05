@@ -24,7 +24,7 @@ const AddTravel = () => {
       ...travelDetails,
     };
     //send data to the server
-    fetch("https://whispering-depths-35702.herokuapp.com/", {
+    fetch("https://whispering-depths-35702.herokuapp.com/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",

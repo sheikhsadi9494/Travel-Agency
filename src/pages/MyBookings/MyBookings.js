@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { CircularProgress, Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
@@ -30,18 +30,24 @@ const MyBookings = () => {
       >
         My Bookings
       </Typography>
-      <Container sx={{ mb: 15 }}>
-        <Grid container spacing={2}>
-          {bookings.map((booking) => (
-            <MyBooking
-              key={booking._id}
-              booking={booking}
-              bookings={bookings}
-              setBookings={setBookings}
-            ></MyBooking>
-          ))}
-        </Grid>
-      </Container>
+      {bookings.length <= 0 ? (
+        <Box sx={{ width: "3.5%", mx: "auto", my: 10 }}>
+          <CircularProgress />
+        </Box>
+      ) : (
+        <Container sx={{ mb: 15 }}>
+          <Grid container spacing={2}>
+            {bookings.map((booking) => (
+              <MyBooking
+                key={booking._id}
+                booking={booking}
+                bookings={bookings}
+                setBookings={setBookings}
+              ></MyBooking>
+            ))}
+          </Grid>
+        </Container>
+      )}
       <Footer></Footer>
     </div>
   );

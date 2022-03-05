@@ -31,7 +31,7 @@ const OurAcivement = () => {
                 Cuntries 
               </Typography>
               <Typography sx={{fontWeight: 'bold', color: '#1569d6'}} variant="h3" gutterBottom component="div">
-                200
+                200 +
               </Typography>
             </Box>
           </Paper>
